@@ -7,14 +7,14 @@ users:
     groups:
       - "{{ web_group }}"
     keys:
-      - "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
-      # - https://github.com/username.keys
+      - "{{ lookup('file', '~/.ssh/id_rsa_p.pub') }}"
+      - https://github.com/valeravilks.keys
   - name: "{{ admin_user }}"
     groups:
       - sudo
     keys:
-      - "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
-      # - https://github.com/username.keys
+      - "{{ lookup('file', '~/.ssh/id_rsa_p.pub') }}"
+      - https://github.com/valeravilks.keys
 
 web_user: root
 web_group: www-data
