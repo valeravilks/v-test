@@ -8,7 +8,7 @@ wordpress_sites:
       redirects:
       - www.valeravilks.ru
     local_path: ../site
-    branch: nnn
+    branch: master
     repo: git@github.com:valeravilks/valeravilks-4.1.git
     repo_subtree_path: site
     multisite:
