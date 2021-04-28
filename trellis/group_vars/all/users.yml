@@ -7,16 +7,16 @@ users:
     groups:
       - "{{ web_group }}"
     keys:
-      - "{{ lookup('file', '~/.ssh/id_rsa_p.pub') }}"
+      - "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
       - https://github.com/valeravilks.keys
   - name: "{{ admin_user }}"
     groups:
       - sudo
     keys:
-      - "{{ lookup('file', '~/.ssh/id_rsa_p.pub') }}"
+      - "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
       - https://github.com/valeravilks.keys
 
-web_user: root
+web_user: web
 web_group: www-data
 web_sudoers:
   - "/usr/sbin/service php7.4-fpm *"
